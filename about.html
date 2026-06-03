@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="About Raagini Gupta, including acting training, resume, languages, and special skills.">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self'; media-src 'self'; script-src 'self'; style-src 'self'; form-action 'self'; upgrade-insecure-requests">
     <title>About | Raagini Gupta</title>
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -11,10 +13,6 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header" aria-label="Primary navigation">
-      <a class="brand" href="index.html" aria-label="Raagini Gupta home">
-        <span>Raagini</span>
-        <span>Gupta</span>
-      </a>
       <nav class="nav-links" aria-label="Main">
         <a href="index.html">Home</a>
         <a href="film.html">Film & Reels</a>
@@ -22,29 +20,30 @@
         <a href="about.html" aria-current="page">About</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <a class="nav-action" href="docs/raagini-gupta-acting-resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+      <a class="nav-action" href="docs/raagini-gupta-acting-resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
     </header>
 
     <main id="main">
       <section class="about-layout">
         <div class="about-copy">
           <p class="eyebrow">About</p>
-          <h1>Training, texture, and a wide real-world range.</h1>
           <p class="intro">Raagini is a New York City-based actor and model currently training in the 2-Year Conservatory at the Lee Strasberg Theatre & Film Institute. Her background brings together method training, on-camera study, movement, voice, dance, athletics, public speaking, and professional set experience.</p>
           <div class="hero-actions">
-            <a class="button primary" href="docs/raagini-gupta-acting-resume.pdf" target="_blank" rel="noreferrer">View Resume</a>
+            <a class="button primary" href="docs/raagini-gupta-acting-resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
             <a class="button secondary" href="contact.html">Contact</a>
           </div>
         </div>
-        <div class="about-image">
-          <img src="assets/raagini-acting-03.jpg" alt="Close profile editorial portrait of Raagini Gupta in sunglasses">
+        <div class="about-headshot-feature" aria-label="Raagini Gupta headshot">
+          <figure>
+            <img src="assets/raagini-headshot-bw-01.jpg" alt="Black and white close-up headshot of Raagini Gupta">
+          </figure>
         </div>
       </section>
 
       <section class="split-section training">
         <div class="section-heading">
           <p class="section-kicker">Training</p>
-          <h2>Studio discipline with practical on-camera work.</h2>
+          <h2>Education</h2>
         </div>
         <div class="timeline" aria-label="Acting training timeline">
           <article class="timeline-item">
@@ -66,35 +65,37 @@
       </section>
 
       <section class="skills-section" aria-label="Special skills">
-        <div>
+        <figure class="skills-image">
+          <img src="assets/raagini-headshot-bw-02.jpg" alt="Black and white headshot portrait of Raagini Gupta">
+        </figure>
+        <div class="skills-copy">
           <p class="section-kicker">Skills</p>
-          <h2>Useful range for casting.</h2>
+          <ul class="skill-cloud">
+            <li>Hindi</li>
+            <li>English</li>
+            <li>Basketball</li>
+            <li>Bollywood Dance</li>
+            <li>Hip-Hop</li>
+            <li>Swimming</li>
+            <li>Pilates</li>
+            <li>Running</li>
+            <li>Cooking</li>
+            <li>Public Speaking</li>
+            <li>Poker</li>
+            <li>Computer Science</li>
+            <li>Corporate Career</li>
+            <li>Real Estate</li>
+            <li>USA Passport</li>
+            <li>Driver's License</li>
+          </ul>
         </div>
-        <ul class="skill-cloud">
-          <li>Hindi</li>
-          <li>English</li>
-          <li>Basketball</li>
-          <li>Bollywood Dance</li>
-          <li>Hip-Hop</li>
-          <li>Swimming</li>
-          <li>Pilates</li>
-          <li>Running</li>
-          <li>Cooking</li>
-          <li>Public Speaking</li>
-          <li>Poker</li>
-          <li>Computer Science</li>
-          <li>Corporate Career</li>
-          <li>Real Estate</li>
-          <li>USA Passport</li>
-          <li>Driver's License</li>
-        </ul>
       </section>
     </main>
 
     <footer class="site-footer">
       <p>Raagini Gupta · About</p>
       <div class="footer-links">
-        <a href="https://www.instagram.com/raagini_gupta/" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="https://www.instagram.com/raagini_gupta/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="contact.html">Contact</a>
       </div>
     </footer>
