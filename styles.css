@@ -1218,12 +1218,12 @@ figcaption {
 .about-layout {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(18rem, 0.58fr) minmax(0, 0.95fr);
-  gap: clamp(2.5rem, 6vw, 5.5rem);
+  grid-template-columns: minmax(28rem, 1fr) minmax(20rem, 0.66fr);
+  gap: clamp(2.75rem, 6vw, 6.5rem);
   align-items: center;
   min-height: 78vh;
-  padding-top: clamp(3rem, 7vw, 7rem);
-  padding-bottom: clamp(3rem, 7vw, 6rem);
+  padding-top: clamp(3rem, 6.4vw, 6.25rem);
+  padding-bottom: clamp(3rem, 6.4vw, 5.75rem);
   overflow: hidden;
   background:
     radial-gradient(circle at 78% 18%, rgba(185, 111, 92, 0.16), transparent 28rem),
@@ -1231,7 +1231,8 @@ figcaption {
 }
 
 .about-copy {
-  max-width: 42rem;
+  justify-self: center;
+  width: min(100%, 43rem);
   color: #f8fbfa;
   animation: pageCopyEnter 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -1246,7 +1247,7 @@ figcaption {
 }
 
 .about-note {
-  max-width: 37rem;
+  max-width: 41rem;
   margin: 1.2rem 0 1.8rem;
   padding-left: 1.15rem;
   border-left: 1px solid rgba(248, 251, 250, 0.58);
@@ -1276,15 +1277,23 @@ figcaption {
   object-fit: contain;
 }
 
+.about-headshot-feature img {
+  display: block;
+  height: auto;
+}
+
 .about-headshot-feature {
   align-self: stretch;
   display: grid;
   align-items: center;
+  justify-self: start;
+  width: min(100%, 32rem);
   animation: portraitFloatEnter 1100ms cubic-bezier(0.22, 1, 0.36, 1) 120ms both;
 }
 
 .about-headshot-feature figure {
-  height: clamp(36rem, 50vw, 47rem);
+  width: 100%;
+  height: auto;
   filter: drop-shadow(0 30px 52px rgba(7, 15, 22, 0.34));
 }
 
@@ -1514,13 +1523,27 @@ body:has(.home-hero-v2) .site-footer {
     min-height: 34rem;
   }
 
+  .about-headshot-feature {
+    justify-self: center;
+    width: min(100%, 34rem);
+    min-height: 0;
+  }
+
+  .about-copy {
+    justify-self: center;
+    width: min(100%, 44rem);
+  }
+
   .contact-image {
     min-height: 0;
   }
 
-  .about-headshot-feature figure,
   .skills-image {
     height: clamp(28rem, 58vw, 38rem);
+  }
+
+  .about-headshot-feature figure {
+    height: auto;
   }
 
   .credits-grid,
@@ -1637,9 +1660,12 @@ body:has(.home-hero-v2) .site-footer {
     height: auto;
   }
 
-  .about-headshot-feature figure,
   .skills-image {
     height: clamp(25rem, 112vw, 34rem);
+  }
+
+  .about-headshot-feature figure {
+    height: auto;
   }
 
   .credit-card,
