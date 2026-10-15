@@ -194,6 +194,10 @@ body:not(:has(.home-hero-v2)) .nav-action {
 .photo-strip,
 .reel-section,
 .film-feature,
+.selected-film-work,
+.screen-work-section,
+.screen-credit-section,
+.upcoming-film-section,
 .work-layout,
 .runway-story,
 .editorial-shoot,
@@ -728,6 +732,9 @@ dd {
 
 .reel-section,
 .film-feature,
+.selected-film-work,
+.screen-work-section,
+.screen-credit-section,
 .split-section,
 .gallery-section,
 .skills-section,
@@ -749,6 +756,7 @@ dd {
 }
 
 .film-feature > *,
+.selected-film-work > *,
 .work-layout > *,
 .reel-section > *,
 .gallery-section > *,
@@ -759,6 +767,7 @@ dd {
 }
 
 .film-feature > :nth-child(2),
+.selected-film-work > :nth-child(2),
 .work-layout > :nth-child(2),
 .runway-story > :nth-child(2),
 .editorial-shoot > :nth-child(2),
@@ -788,6 +797,248 @@ dd {
   aspect-ratio: 16 / 9;
   background: #dfe7eb;
   box-shadow: var(--shadow);
+}
+
+.screen-work-section {
+  background:
+    linear-gradient(145deg, rgba(248, 250, 249, 0.98), rgba(228, 237, 240, 0.88)),
+    var(--paper-soft);
+}
+
+.screen-work-section .section-heading h2,
+.screen-credit-section .section-heading h2 {
+  max-width: 18ch;
+}
+
+.screen-work-list {
+  max-width: 76rem;
+}
+
+.screen-work-entry {
+  display: grid;
+  grid-template-columns: minmax(22rem, 1.12fr) minmax(18rem, 0.68fr);
+  gap: clamp(2rem, 5vw, 5.5rem);
+  align-items: center;
+  padding: clamp(2.25rem, 5vw, 4.5rem) 0;
+  border-top: 1px solid rgba(32, 36, 49, 0.14);
+}
+
+.screen-work-entry:last-child {
+  border-bottom: 1px solid rgba(32, 36, 49, 0.14);
+}
+
+.screen-work-media {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.screen-work-media img,
+.screen-work-media video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.screen-work-media video {
+  aspect-ratio: 16 / 9;
+}
+
+.screen-work-copy {
+  max-width: 30rem;
+}
+
+.screen-work-copy .credit-type {
+  margin-bottom: 0.6rem;
+}
+
+.screen-work-copy h2 {
+  margin-bottom: 0.3rem;
+}
+
+.screen-work-copy .credit-meta {
+  margin-bottom: 1rem;
+}
+
+.screen-work-copy p:last-child {
+  margin-bottom: 0;
+  color: #4f5e69;
+  font-size: 1.04rem;
+}
+
+.screen-credit-section {
+  background: #f5f8f7;
+}
+
+.screen-credit-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 2rem);
+}
+
+.screen-credit-list article {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(32, 36, 49, 0.14);
+}
+
+.screen-credit-list h3 {
+  margin-bottom: 0.22rem;
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 2.5vw, 2.2rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+
+.screen-credit-list .credit-meta {
+  margin-bottom: 0.8rem;
+}
+
+.screen-credit-list p:last-child {
+  margin-bottom: 0;
+  color: #4f5e69;
+}
+
+.upcoming-film-section {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.62fr) minmax(20rem, 0.88fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: center;
+  padding-top: clamp(1.45rem, 3vw, 2.25rem);
+  padding-bottom: clamp(1.55rem, 3vw, 2.35rem);
+  background: var(--panel);
+  color: #f5f8f7;
+}
+
+.upcoming-film-section .section-kicker,
+.upcoming-film-section .credit-type,
+.upcoming-film-section .credit-meta {
+  color: #e3b7a6;
+}
+
+.upcoming-film-section h2,
+.supporting-reels .quiet-card h2 {
+  max-width: 22ch;
+  margin-bottom: 1.45rem;
+  color: #ffffff;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.6vw, 3.35rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.upcoming-film-copy {
+  max-width: 42rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(245, 248, 247, 0.26);
+}
+
+.upcoming-film-copy .credit-type {
+  margin-bottom: 0.45rem;
+}
+
+.upcoming-film-copy .credit-meta {
+  margin-bottom: 0.9rem;
+}
+
+.upcoming-film-copy p:last-child {
+  margin-bottom: 0;
+  color: rgba(245, 248, 247, 0.88);
+  font-size: 1.06rem;
+}
+
+.supporting-reels .quiet-card {
+  display: grid;
+  justify-items: start;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  text-align: left;
+}
+
+.supporting-reels {
+  padding-top: clamp(2rem, 4vw, 3.25rem);
+  padding-bottom: clamp(2rem, 4vw, 3.25rem);
+  background: #f5f8f7;
+}
+
+.supporting-reels .section-kicker {
+  margin: 0;
+}
+
+.supporting-reels .quiet-card h2 {
+  color: var(--ink);
+  margin: 0;
+}
+
+.supporting-reels .quiet-card p {
+  max-width: 42rem;
+  margin: 0;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.selected-film-work {
+  background:
+    linear-gradient(145deg, rgba(244, 239, 232, 0.98), rgba(225, 233, 235, 0.9)),
+    var(--paper-soft);
+}
+
+.selected-film-work .section-heading h2 {
+  max-width: 20ch;
+}
+
+.selected-film-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+.film-credit-feature {
+  overflow: hidden;
+  background: rgba(255, 255, 253, 0.72);
+  box-shadow: 0 22px 50px rgba(24, 38, 49, 0.1);
+}
+
+.film-credit-feature figure {
+  margin: 0;
+  background: #15232d;
+}
+
+.film-credit-feature img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+.film-credit-copy {
+  padding: clamp(1.25rem, 2.6vw, 2rem);
+}
+
+.film-credit-copy .credit-type {
+  margin-bottom: 0.6rem;
+}
+
+.film-credit-copy h3 {
+  margin-bottom: 0.2rem;
+  font-family: var(--serif);
+  font-size: clamp(1.65rem, 2.7vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+
+.film-credit-copy .credit-meta {
+  margin-bottom: 0.85rem;
+}
+
+.film-credit-copy p:last-child {
+  margin-bottom: 0;
+  color: #4f5e69;
 }
 
 .reel-grid {
@@ -1467,6 +1718,10 @@ body:has(.home-hero-v2) .site-footer {
   .page-preview-grid,
   .photo-strip,
   .film-feature,
+  .selected-film-grid,
+  .screen-work-entry,
+  .screen-credit-list,
+  .upcoming-film-section,
   .work-layout,
   .runway-story,
   .editorial-shoot,
@@ -1670,6 +1925,10 @@ body:has(.home-hero-v2) .site-footer {
   .photo-strip,
   .reel-section,
   .film-feature,
+  .selected-film-work,
+  .screen-work-section,
+  .screen-credit-section,
+  .upcoming-film-section,
   .work-layout,
   .runway-story,
   .editorial-shoot,
@@ -1811,6 +2070,10 @@ body:has(.home-hero-v2) .site-footer {
 
   .reel-section,
   .film-feature,
+  .selected-film-work,
+  .screen-work-section,
+  .screen-credit-section,
+  .upcoming-film-section,
   .work-layout,
   .runway-story,
   .editorial-shoot,
@@ -1830,6 +2093,34 @@ body:has(.home-hero-v2) .site-footer {
 
   .film-headshot img {
     width: min(100%, 31rem);
+  }
+
+  .selected-film-grid {
+    gap: 1.2rem;
+  }
+
+  .screen-work-entry {
+    gap: 1.25rem;
+    padding: 2rem 0;
+  }
+
+  .screen-work-copy p:last-child {
+    font-size: 1rem;
+  }
+
+  .screen-credit-list {
+    gap: 1.5rem;
+  }
+
+  .upcoming-film-section {
+    gap: 1.15rem;
+    align-items: start;
+    padding-top: 1.45rem;
+    padding-bottom: 1.55rem;
+  }
+
+  .film-credit-copy {
+    padding: 1.15rem;
   }
 
   .hero-stats {
